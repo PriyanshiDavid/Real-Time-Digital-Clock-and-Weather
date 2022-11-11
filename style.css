@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'digi';
+	src: url('http://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF');
+}
+
+.clock {
+  font-family: 'digi';
+  font-size:70px;
+  background-color: rgba(0,0,0,0.2);
+  text-align: center;
+  
+}
+
+.text-center {
+    color: black;
+    font-size: 85px;
+    text-align: center;
+}
+
+body{
+    background-image: url("images/Bg2.jpg");
+    background-position: center;
+
+}

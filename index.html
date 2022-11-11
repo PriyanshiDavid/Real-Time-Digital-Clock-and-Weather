@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="clock">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js" data-semver="1.0.7"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <h1 class="text-center">Bonjour, Priyanshi!</h1>
+    <div class="alert alert-info text-center clock">{{theclock}}</div>
+
+    <div class="weatherWidget" ></div>
+
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"VUNES6LQRQGX63T2MJGDUCRSY",
+       location:"Chennai, India", 
+       unitGroup:"metric", //"us" or "metric"
+       forecastDays:7, //how many days forecast to show
+       title:"Chennai, India", //optional title to show in the 
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+  </body>
+
+</html>
